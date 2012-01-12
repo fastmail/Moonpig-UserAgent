@@ -1,5 +1,6 @@
 package Moonpig::UserAgent;
 use Moose;
+# ABSTRACT: a convenient user agent for the Moonpig HTTP API
 
 our $VERSION = 0.20110525;
 
