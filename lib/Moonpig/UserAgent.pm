@@ -2,17 +2,14 @@ package Moonpig::UserAgent;
 use Moose;
 # ABSTRACT: a convenient user agent for the Moonpig HTTP API
 
-our $VERSION = 0.20110525;
-
 use HTTP::Request;
 use LWP::UserAgent;
 use URI;
 
-
 has agent_string => (
   is => 'ro',
   isa => 'Str',
-  default => sub { join "/", __PACKAGE__, $VERSION },
+  default => sub { join "/", __PACKAGE__, __PACKAGE__->VERSION },
 );
 
 has UA => (
