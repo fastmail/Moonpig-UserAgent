@@ -60,7 +60,7 @@ sub mp_post {
 
 sub mp_request {
   my ($self, $method, $path, $arg, $extra_arg) = @_;
-  $extra_arg //= {};
+  $extra_arg = {} unless defined $extra_arg;
 
   my $target = $self->qualify_path($path);
   $method = lc $method;
