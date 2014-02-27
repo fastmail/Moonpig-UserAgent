@@ -1,6 +1,7 @@
 package Moonpig::UserAgent;
-use Moose;
 # ABSTRACT: a convenient user agent for the Moonpig HTTP API
+
+use Moose;
 
 use HTTP::Request;
 use LWP::UserAgent;
