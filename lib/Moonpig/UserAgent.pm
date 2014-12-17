@@ -35,7 +35,7 @@ has JSON => (
   is => 'ro',
   default => sub {
     require JSON;
-    JSON->new;
+    JSON->new->ascii(1);
   },
   handles => [ qw(encode decode) ],
 );
