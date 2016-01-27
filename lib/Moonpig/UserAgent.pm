@@ -69,6 +69,7 @@ sub mp_request {
     $res = $self->get($target);
     return undef if $res->code == 404;
   } elsif ($method eq 'post' or $method eq 'put') {
+    confess "no payload given for $method request" unless defined $arg;
     my $payload = $self->encode($arg);
 
     my $req = HTTP::Request->new(
